@@ -5,6 +5,8 @@ import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import WelcomeScreen from './src/screens/WelcomeScreen';
 import RoleSelectionScreen from './src/screens/RoleSelectionScreen';
 import LoginScreen from './src/screens/LoginScreen';
+import SignUpScreen from './src/screens/SignUpScreen';
+import CreateTutorProfileScreen from './src/screens/CreateTutorProfileScreen';
 import TutorSearchScreen from './src/screens/TutorSearchScreen';
 import TutorProfileScreen from './src/screens/TutorProfileScreen';
 
@@ -23,6 +25,8 @@ function App() {
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="RoleSelection" component={RoleSelectionScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="CreateTutorProfile" component={CreateTutorProfileScreen} />
         <Stack.Screen name="TutorSearch" component={TutorSearchScreen} />
         <Stack.Screen name="TutorProfile" component={TutorProfileScreen} />
       </Stack.Navigator>

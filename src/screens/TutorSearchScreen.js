@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const tutors = [
+const initialTutors = [
   {
     id: 1,
     name: 'Alexandre D.',
@@ -25,7 +25,16 @@ const tutors = [
   },
 ];
 
-const TutorSearchScreen = ({ navigation }) => {
+const TutorSearchScreen = ({ route, navigation }) => {
+  const [tutors, setTutors] = useState(initialTutors);
+  const newTutor = route.params?.newTutor;
+
+  useEffect(() => {
+    if (newTutor) {
+      setTutors((prevTutors) => [newTutor, ...prevTutors]);
+    }
+  }, [newTutor]);
+
   return (
     <SafeAreaView className="flex-1 bg-background-light dark:bg-background-dark">
       <View className="p-4">

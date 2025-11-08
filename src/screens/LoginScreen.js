@@ -64,6 +64,10 @@ const LoginScreen = ({ navigation }) => {
         <Text className="text-lg font-semibold text-background-dark">Se connecter</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+        <Text className="text-sm font-medium text-primary/80 text-center mb-6">Pas encore de compte ? S'inscrire</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity>
         <Text className="text-sm font-medium text-primary/80 text-right mb-6">Mot de passe oublié ?</Text>
       </TouchableOpacity>

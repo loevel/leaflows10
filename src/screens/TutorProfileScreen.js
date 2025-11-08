@@ -44,7 +44,10 @@ const TutorProfileScreen = ({ route, navigation }) => {
       </ScrollView>
 
       <View className="p-4 border-t border-border-light dark:border-border-dark">
-        <TouchableOpacity className="bg-primary rounded-xl h-14 justify-center items-center">
+        <TouchableOpacity
+          className="bg-primary rounded-xl h-14 justify-center items-center"
+          onPress={() => navigation.navigate('Chat', { conversation: { name: tutor.name, avatar: tutor.avatar } })}
+        >
           <Text className="text-white text-base font-bold">Contacter</Text>
         </TouchableOpacity>
       </View>

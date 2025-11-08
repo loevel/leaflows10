@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const initialTutors = [
   {
@@ -37,8 +38,11 @@ const TutorSearchScreen = ({ route, navigation }) => {
 
   return (
     <SafeAreaView className="flex-1 bg-background-light dark:bg-background-dark">
-      <View className="p-4">
+      <View className="flex-row items-center justify-between p-4">
         <Text className="text-2xl font-bold text-primary-dark-text dark:text-primary-light-text">Trouvez le tuteur idéal</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('ConversationList')}>
+          <Icon name="chat" size={24} color="#4c9a59" />
+        </TouchableOpacity>
       </View>
       <View className="px-4 py-3 flex-row items-center gap-3">
         <View className="flex-1 flex-row items-center rounded-lg bg-subtle-green-bg/60 dark:bg-background-dark">

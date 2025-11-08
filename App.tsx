@@ -9,6 +9,8 @@ import SignUpScreen from './src/screens/SignUpScreen';
 import CreateTutorProfileScreen from './src/screens/CreateTutorProfileScreen';
 import TutorSearchScreen from './src/screens/TutorSearchScreen';
 import TutorProfileScreen from './src/screens/TutorProfileScreen';
+import ConversationListScreen from './src/screens/ConversationListScreen';
+import ChatScreen from './src/screens/ChatScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +31,8 @@ function App() {
         <Stack.Screen name="CreateTutorProfile" component={CreateTutorProfileScreen} />
         <Stack.Screen name="TutorSearch" component={TutorSearchScreen} />
         <Stack.Screen name="TutorProfile" component={TutorProfileScreen} />
+        <Stack.Screen name="ConversationList" component={ConversationListScreen} />
+        <Stack.Screen name="Chat" component={ChatScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
